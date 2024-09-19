@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:estheva/firebase_options.dart';
 import 'package:estheva/responsive/responsive_layout.dart';
 import 'package:estheva/screens/splash_screen.dart';
-import 'package:estheva/website_medicare/web_screens/web_auth/web_sign_in.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(
+    name: "estheva",
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
@@ -42,8 +42,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: ResponsiveLayout(
-            mobileScreenLayout: SplashScreen(),
-            webScreenLayout: WebSignInPage()));
+        home: SplashScreen());
   }
 }

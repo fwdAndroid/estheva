@@ -4,7 +4,24 @@ import 'package:estheva/screens/details/product_booking.dart';
 import 'package:estheva/uitls/colors.dart';
 
 class ProductDetail extends StatefulWidget {
-  const ProductDetail({super.key});
+  final description;
+  final discount;
+  final photoURL;
+  final uuid;
+  final price;
+  final serviceCategory;
+  final serviceName;
+  final serviceSubCategory;
+  const ProductDetail(
+      {super.key,
+      required this.description,
+      required this.discount,
+      required this.photoURL,
+      required this.price,
+      required this.serviceCategory,
+      required this.serviceName,
+      required this.serviceSubCategory,
+      required this.uuid});
 
   @override
   State<ProductDetail> createState() => _ProductDetailState();

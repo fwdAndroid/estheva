@@ -12,7 +12,6 @@ import 'package:estheva/screens/setting_pages/support.dart';
 import 'package:estheva/uitls/colors.dart';
 import 'package:estheva/widgets/logout_widget.dart';
 import 'package:estheva/widgets/save_button.dart';
-import 'package:share/share.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({super.key});
@@ -311,9 +310,9 @@ class _HistoryPageState extends State<HistoryPage> {
     // Replace 'YOUR_INVITE_LINK' with your actual invite link
     final String inviteLink = 'https://yourapp.com/invite?ref=friend123';
 
-    Share.share(
-      'Join our app using my invite link: $inviteLink',
-      subject: 'Join us on the app!',
-    );
+    // Share.share(
+    //   'Join our app using my invite link: $inviteLink',
+    //   subject: 'Join us on the app!',
+    // );
   }
 }
